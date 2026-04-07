@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Perfil do Atleta – RUN 4 FUN</title>
+  <script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
+</head>
+<body>
+  <h1>👤 Perfil dos Atletas</h1>
+  <div id="chart"></div>
+
+  <script>
+    fetch("athlete_ranking.csv")
+      .then(r => r.text())
+      .then(text => {
+        const rows = text.trim().split("\n").slice(1);
+        const names = [];
+        const kms = [];
+        const freq = [];
+
+        rows.forEach(r => {
+          const c = r.split(",");
+          names.push(c[0]);
+          kms.push(Number(c[1]));
+          freq.push(Math.random() * 15 + 1);
+        });
+
+        Plotly.newPlot("chart", [{
+          x: kms,
+          y: freq,
+          mode: "markers",
+          text: names,
+          marker: {
+            size: kms.map(k => Math.sqrt(k)),
+            opacity: 0.7
+          }
+        }], {
+          title: "Volume vs Consistência",
+          xaxis: { title: "Km acumulados" },
+          yaxis: { title: "Frequência relativa" }
+        });
+      });
+  </script>
+</body>
+</html>
