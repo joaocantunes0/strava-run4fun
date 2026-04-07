@@ -1,10 +1,18 @@
-# RUN 4 FUN – Dashboard Interativo
+# RUN 4 FUN – Dashboard Interativo 🏃‍♂️📊
+
+Bem-vindo ao dashboard público de dados Strava do RUN 4 FUN.
 
 ## 📈 Evolução semanal
-<a href="weekly_km.html" target="_blank">Abrir gráfico</a>
+[Abrir gráfico](weekly_km.html)
 
 ## 🏆 Ranking acumulado por atleta
-<a href="athlete_ranking.html" target="_blank">Abrir ranking</a>
+[Abrir ranking](athlete_ranking.html)
+
+## 🔁 Consistência por atleta
+[Abrir consistência](athlete_consistency.html)
+
+## 👤 Perfil individual dos atletas
+[Abrir perfis](athlete_profile.html)
 
 ---
 Mais do que quilómetros, uma comunidade.
